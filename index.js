@@ -15,7 +15,7 @@ const corsOptions = {
   origin: [
     'http://localhost:5173',
     'https://os.netlabdte.com',
-    process.env.FRONTEND_URL // Add your Vercel frontend URL here
+    'https://sbdcs9-frontend.vercel.app/' // Add your Vercel frontend URL here
   ].filter(Boolean), // Filter out undefined values
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
