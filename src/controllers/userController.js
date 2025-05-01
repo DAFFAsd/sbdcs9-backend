@@ -1,5 +1,5 @@
 const pool = require('../database/pg-database');
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const saltRounds = 10;
 
 const registerUser = async (req, res) => {
