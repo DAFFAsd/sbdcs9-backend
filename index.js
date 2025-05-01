@@ -10,14 +10,16 @@ const path = require('path');
 
 const app = express();
 
-// CORS configuration - update with your Vercel frontend URL
-const corsOptions = { 
-  origin: '*'
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-};
+const options = [
+  cors({
+    origin: '*',
+    methods: '*',
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+  })
+];
 
-app.use(cors(corsOptions));
+app.use(options);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); 
 
